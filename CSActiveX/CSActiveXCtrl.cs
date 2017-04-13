@@ -26,9 +26,9 @@ namespace CSActiveX
     public interface AxCSActiveXCtrl
     {
         //Свойства
-        float FloatProperty1 { get; set; }
+        float FloatProperty { get; set; }
         //Методы
-        string HelloWorld1();
+        string HelloWorld();
     }
 
     /// <summary>
@@ -43,9 +43,9 @@ namespace CSActiveX
         // Необходимо явно определять DISPID для каждого события, иначе,
         // адрес обратного вызова не может быть найден при вызове события
         [DispId(1)]
-        void Click1();
+        void Click();
         [DispId(2)]
-        void FloatPropertyChanging1(float NewValue);
+        void FloatPropertyChanging(float NewValue);
     }
 
     /// <summary>
@@ -81,14 +81,14 @@ namespace CSActiveX
         private float fField = 0;
 
         //Открытое свойство, доступное внешней среде с get и set
-        public float FloatProperty1
+        public float FloatProperty
         {
             get { return this.fField; }
             set 
             {
                 // При установке свойства вызывается событие FloatProperyChanging(newValue)
-                if (null != FloatPropertyChanging1)
-                    FloatPropertyChanging1(value);
+                if (null != FloatPropertyChanging)
+                    FloatPropertyChanging(value);
                 this.fField = value;
                 this.lbFloatProperty.Text = value.ToString();   //Обновление текста о текущем размере float
             }
@@ -98,7 +98,7 @@ namespace CSActiveX
         // В данной секции показан метод, доступный внешней среде, т.к. является public
         #region Methods
         //Функция возвращает строку либо во внешнюю среду либо может выполняться средой .NET
-        public string HelloWorld1()
+        public string HelloWorld()
         {
             return "Сообщение Hello World";
         }
@@ -114,16 +114,16 @@ namespace CSActiveX
         //Событие отсылаемое во внешнюю среду без параметра
         [ComVisible(false)]
         public delegate void ClickEventHandler();
-        public new event ClickEventHandler Click1 = null;
+        public new event ClickEventHandler Click = null;
         void CSActiveXCtrl_Click(object sender, EventArgs e)
         {
-            if (null != Click1) Click1(); // Произвести новое событие Click.
+            if (null != Click) Click(); // Произвести новое событие Click.
         }
 
         //Событие отсылаемое во внешнюю среду с параметром
         [ComVisible(false)]
         public delegate void FloatPropertyChangingEventHandler(float NewValue);
-        public event FloatPropertyChangingEventHandler FloatPropertyChanging1 = null;
+        public event FloatPropertyChangingEventHandler FloatPropertyChanging = null;
 
         //Событие обрабатываемое полностью внутри приложения .NET и не может контроллироваться внешней средой
         private void btnMessage_Click(object sender, EventArgs e)
