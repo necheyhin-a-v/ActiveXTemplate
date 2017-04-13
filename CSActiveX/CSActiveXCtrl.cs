@@ -55,7 +55,7 @@ namespace CSActiveX
     /// </summary>
     [ClassInterface(ClassInterfaceType.None)]
     [ComSourceInterfaces(typeof(AxCSActiveXCtrlEvents))]
-    [Guid("D4675E22-985D-48D0-86B4-D86581FBDF81")]
+    [Guid("60D6D1E7-CD48-401A-A633-00F083A3BB67")]
     public partial class CSActiveXCtrl : UserControl, AxCSActiveXCtrl
     {
         //В данной секции происходит инициализация контрола
