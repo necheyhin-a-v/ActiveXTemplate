@@ -1,0 +1,7 @@
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\Debug\CSActiveX.dll
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\Debug\CSActiveX.pdb
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\Debug\CSActiveX.tlb
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\Debug\CSActiveX.CSActiveXCtrl.resources
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\Debug\CSActiveX.csproj.GenerateResource.Cache
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\Debug\CSActiveX.dll
+C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\Debug\CSActiveX.pdb
