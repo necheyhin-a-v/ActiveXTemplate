@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" > 
+
+<html>
+  <head>
+    <title>ActiveX component</title>
+	<style>
+		#OurActiveX {
+			overflow: scroll;			/* Добавляем полосы прокрутки */
+			border: solid 1px black;	/* Параметры рамки */
+		}
+	</style>
+  </head>
+  <body onload="OpenActiveX()">
+
+	<!-- Сам ActiveX объект -->
+	<OBJECT 
+		id="OurActiveX"
+		name=”OurActiveX"
+		classid="clsid:4B9F42B2-8580-46BB-87F3-7765329D1796"
+		VIEWASTEXT
+		codebase="OurActiveX.cab"
+	></OBJECT>	
+
+	<!-- Подключение к событиям ActiveX -->
+	<script language="javascript">
+		function OurActiveX::Click()
+		{
+			alert("Произведен клик по контролу");
+		}
+		function OurActiveX::FloatPropertyChanging(Parameter)
+		{
+			alert("Свойство FloatProperty изменено на " + Parameter);
+			
+		}
+	</script>
+
+	<!-- Выполнение методов activeX -->
+	<script language="javascript">
+	//Выполняется при запуске тела документа (смотри открывающий тег body)
+	function OpenActiveX()
+	{
+		try
+		{
+			//Выполнение функции
+		}
+		catch(err)
+		{
+			alert(err.description);
+		}
+	}
+	</script>
+	
+	<!-- HTML элементы встроенные в страницу -->
+	<form>
+		<p>Это обычный html объект - поле ввода</p>
+		<input type="textarea"/>
+	</form>
+	
+  </body>
+</html>
