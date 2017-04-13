@@ -1,7 +1,0 @@
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\bin\x86\Release\CSActiveX.dll
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\bin\x86\Release\CSActiveX.pdb
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\bin\x86\Release\CSActiveX.tlb
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\x86\Release\CSActiveX.CSActiveXCtrl.resources
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\x86\Release\CSActiveX.csproj.GenerateResource.Cache
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\x86\Release\CSActiveX.dll
-C:\Users\ALEKSANDR NECHEUKHIN\Desktop\CSActiveX\obj\x86\Release\CSActiveX.pdb
